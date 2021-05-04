@@ -1,6 +1,6 @@
 .header {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
     &__logo {
         width: 250px;
@@ -16,9 +16,6 @@
         span {
             display: block;
             font-size: 18px;
-        }
-        &:hover {
-            color: red;
         }
     }
     &__phone {
@@ -38,5 +35,3 @@
         align-items: flex-end;
     }
 }
-
-/* 32:22 */
