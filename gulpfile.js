@@ -31,3 +31,5 @@ gulp.task('watch', function() {
 });
 
 gulp.task('default', gulp.parallel('watch', 'server', 'styles'));
+
+// /**/ - позволяет следить не только за всеми файлами расширения * но и за всеми папками внутри и за всеми файлами внутри
