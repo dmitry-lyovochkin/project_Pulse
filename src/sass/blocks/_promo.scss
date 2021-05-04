@@ -9,4 +9,52 @@
         margin-top: 90px;
 
     }
+    &__header {
+        color: #ffffff;
+        font-style: 42px;
+        font-weight: 700;
+        text-transform: uppercase;
+        line-height: 42px;
+    }
+    &__subheader {
+        margin-top: 17px;
+        color: #ffffff;
+        font-style: 24px;
+        font-weight: 500;
+        text-transform: uppercase;
+    }
+    &__icons {
+        margin-top: 65px;
+        width: 425px;
+        display: flex;
+        justify-content: space-between;
+    }
+    &__icon {
+        width: 108px;
+        text-align: center;
+        color: #ffffff;
+        font-style: 14px;
+        font-weight: 500px;
+        img {
+            display: block;
+            margin: 0 auto;
+            margin-bottom: 20px;
+        }
+    }
+    &__link {
+        color: #ffffff;
+        font-size: 16px;
+        font-weight: 500;
+        margin-top: 18px;
+        a {
+            color: #ffffff;
+            text-transform: uppercase;
+            text-decoration: underline;
+            text-decoration: none;
+            &:hover {
+                color: red;
+                text-decoration: none;
+            }
+        }
+    }
 }
