@@ -1,0 +1,26 @@
+.carousel {
+    padding: 81px 0;
+    &__inner {
+        position: relative;
+        width: 750px;
+        margin: 0 auto; /* слайдер встанет по центру */
+    }
+    .slick-prev, .slick-next { /* стрелки только внутри этого класса, блока будут так стилизовыаться, а не все стрелки(если прописать не здесь, будет применено ко всем) */
+        // позиционирование стрелки
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: -66px;
+        border: none; /* убрать рамки */
+        background-color: #fff; /* убрать фон картинки, поменять на белый */
+        img {
+            width: 31px;
+            height: 50px;
+        }
+    }
+    .slick-next {
+        right: -66px;
+        left: auto;
+    }
+
+}
