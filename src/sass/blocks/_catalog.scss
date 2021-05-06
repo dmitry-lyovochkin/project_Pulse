@@ -1,0 +1,47 @@
+.catalog {
+    padding-bottom: 100px;
+    &__tabs {
+        margin-top: 70px;
+        list-style-type: none;
+        // выравнивание по центру
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 0;
+        padding-left: 0;
+        // padding-right: 80px;
+
+    }
+    &__tab {
+        width: 220px;
+        height: 50px;
+        border: 2px solid #d0d0d0;
+        color: #6b6b6b;
+        font-size: 18px;
+        font-weight: 400;
+        text-transform: uppercase;
+        text-align: center;
+        line-height: 48px; /* если необходимо выровнять надпись в одну строчку на каком то оперделенном элементе */
+        transform: skewX(-25deg); /* наклон блока на 25 градусов. При этом в HTML текст нужно обернуть в дивы, чтоб сохранить от трансформации  */
+        margin: 0 5px; /* будет равный отступ в обе стороны */
+        cursor: pointer;
+        transition: 0.5s all; /* чтоб все анимации с данным элементом былп плавными */
+        &:hover {
+            box-shadow: 3px 3px 20px $main-color; /* добавит тени. 20px - размытие.  */
+            border: none; /* уберет бордер при наведении */
+        }
+        div {
+            transform: skewX(25deg); /* для текста трансофрмация в обратную сторону = ровный текст */
+        }
+        &_active {
+            color: #fff;
+            background-color: $main-color;
+            border: none;
+
+        }
+
+    }
+    &__content {
+        margin-top: 60px;
+    }
+}   
