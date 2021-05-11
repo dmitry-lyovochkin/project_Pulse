@@ -24,4 +24,9 @@
         box-shadow: 3px 3px 20px #fff; /* добавит тени. 20px - размытие.  */
         border: none; /* уберет бордер при наведении */
     }
+    &_mini {
+        width: 131px;
+        height: 40px;
+        font-size: 14px;
+    }
 }

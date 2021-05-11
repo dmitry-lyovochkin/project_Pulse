@@ -44,4 +44,67 @@
     &__content {
         margin-top: 60px;
     }
+    &-item {
+        width: 300px;
+        min-height: 440px; /* если необходимо, будет растягиваться */
+        border: 2px solid #e8e8e8;
+        padding: 20px 20px 26px 20px;
+        &_img {
+            display: block; 
+            margin: 0 auto;
+            max-width: 100%; /* если в будущем картинка будет больше, чем 300px, она будет сжиматься по размеру данного блока */
+            height: 200px;
+        }
+        &__subtitle {
+            margin-top: 20px;
+            color: #0d0d0d;
+            font-size: 16px;
+            font-weight: 700;
+            text-align: center;
+        }
+        &__descr {
+            margin-top: 16px;
+            color: #0d0d0d;
+            font-size: 14px;
+            font-weight: 300;
+            text-align: center;
+        }
+        &__link {
+            display: block;
+            margin-top: 17px;
+            color: $main-color;
+            font-size: 14px;
+            font-weight: 500;
+            text-decoration: underline;
+            text-align: center;
+            text-transform: uppercase;
+            &:hover {
+                color: $main-color; /* при наведении цвет не будет меняться */
+            }
+        }
+        hr {
+            background-color: #e8e8e8;
+            margin-top: 19px;
+            margin-bottom: 21px;
+            border-bottom: none;
+        }
+        &__footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center; /* выравнивание кнопки */
+        }
+        &__old-price {
+            color: #555555;
+            font-size: 14px;
+            font-weight: 300;
+            text-decoration: line-through;
+        }
+        &__price {
+            color: #050505;
+            font-size: 20px;
+            font-weight: 700;
+        }
+
+    } 
+    
 }   
