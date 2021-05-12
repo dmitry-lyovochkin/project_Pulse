@@ -10,7 +10,6 @@
         margin-bottom: 0;
         padding-left: 0;
         // padding-right: 80px;
-
     }
     &__tab {
         width: 220px;
@@ -49,6 +48,7 @@
         min-height: 440px; /* если необходимо, будет растягиваться */
         border: 2px solid #e8e8e8;
         padding: 20px 20px 26px 20px;
+        overflow: hidden;
         &_img {
             display: block; 
             margin: 0 auto;
@@ -83,7 +83,7 @@
             }
         }
         hr {
-            background-color: #e8e8e8;
+            border: 1px solid black;
             margin-top: 19px;
             margin-bottom: 21px;
             border-bottom: none;
@@ -104,7 +104,33 @@
             font-size: 20px;
             font-weight: 700;
         }
-
+        &__wrapper {
+            display: flex;
+            width: calc(200% + 40px); /* функция css позволяющая вычислять разные величины в неординарных ситуациях. Пробелы обязательны */
+        }
+        &__content {
+            width: 50%;
+            margin-right: 0px;
+            transform: translateX(-100%);
+            transition: 0.5s all; /* для плавности */
+            &_active {
+                transform: translateX(0%); /* то есть когда элемент активен, он будет стоять на одном месте. Как только класс активности у него будет убираться, он убираться влево на 100%(строка 114) */
+                margin-right: 20px;
+            }
+        }
+        &__list {
+            width: 50%;
+            margin-left: 20px;
+            transform: translateX(0%);
+            padding-right: 20px;
+            transition: 0.5s all; /* для плавности */
+            padding-left: 0;
+            margin-bottom: 0;
+            list-style-type: none; /* чтоб не было никаких идентификаторов */
+            &_active {
+                transform: translateX(-100%); /* здесь обратная логика 116стр. Таким оюразом он будет замещать старый контент */
+                margin-left: 0px;
+            }
+        }
     } 
-    
-}   
+}
