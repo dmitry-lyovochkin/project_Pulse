@@ -42,6 +42,12 @@
     }
     &__content {
         margin-top: 60px;
+        display: none;
+        justify-content: space-between;
+        flex-wrap: wrap; /* чтоб все непомещающиеся карточки скидывались вниз */
+        &_active {
+            display: flex;
+        }
     }
     &-item {
         width: 300px;
@@ -49,6 +55,7 @@
         border: 2px solid #e8e8e8;
         padding: 20px 20px 26px 20px;
         overflow: hidden;
+        margin-bottom: 20px;
         &_img {
             display: block; 
             margin: 0 auto;
@@ -119,17 +126,48 @@
             }
         }
         &__list {
+            position: relative;
             width: 50%;
             margin-left: 20px;
             transform: translateX(0%);
             padding-right: 20px;
             transition: 0.5s all; /* для плавности */
-            padding-left: 0;
+            padding-left: 19px;
             margin-bottom: 0;
             list-style-type: none; /* чтоб не было никаких идентификаторов */
             &_active {
                 transform: translateX(-100%); /* здесь обратная логика 116стр. Таким оюразом он будет замещать старый контент */
                 margin-left: 0px;
+            }
+            li {
+                position: relative;
+                color: #555555;
+                font-style: 14px;
+                font-weight: 300;
+                margin-bottom: 20px;
+                &:before {
+                    content: '';
+                    position: absolute;
+                    width: 5px;
+                    height: 5px;
+                    background-color: $main-color;
+                    left: -14px;
+                    top: 7px;
+                }
+            }
+        }
+        &__black {
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(calc(-50% - 19px));
+            color: $main-color;
+            font-style: 14px;
+            font-weight: 500;
+            text-decoration: underline;
+            text-transform: uppercase;
+            &:hover {
+                color: $main-color
             }
         }
     } 
